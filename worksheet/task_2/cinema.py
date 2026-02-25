@@ -8,7 +8,6 @@ Please do not add any additional code underneath these functions.
 """
 
 import sqlite3
-#conn = sqlite3.connect("worksheet/task_2/tickets.db")
 
 
 def customer_tickets(conn, customer_id):
