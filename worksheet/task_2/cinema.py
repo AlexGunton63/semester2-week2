@@ -45,7 +45,7 @@ def screening_sales(conn):
     SELECT s.screening_id, f.title, COUNT(t.ticket_id) AS tickets_sold 
     FROM screenings s
     JOIN films f ON s.film_id = f.film_id
-    JOIN tickets t ON s.screening_id = t.screening_id
+    LEFT JOIN tickets t ON s.screening_id = t.screening_id
     GROUP BY s.screening_id , f.title
     ORDER BY tickets_sold DESC;
     """
